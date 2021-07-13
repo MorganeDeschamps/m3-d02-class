@@ -7,14 +7,19 @@ import Counter from './components/Counter'
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  {/*Parent state goes here */}
 
   return (
     <div className="App">
 
 <h1>You spent {count} Euros</h1>
-      <Counter parentSetCount={setCount} parentCount={count} counterName='tibidabo' />
-      <Counter parentSetCount={setCount} parentCount={count} counterName='ovella negra' />
+      <Counter
+      {/* you must pass the callback here */}
+      counterName='tibidabo' />
+
+      <Counter
+      {/* you must pass the callback here */}
+        counterName='ovella negra' />
     </div>
   );
 }
